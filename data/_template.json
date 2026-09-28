@@ -6,52 +6,172 @@
     "industry": "Industry",
     "location": "City, ST",
     "website": "example.com",
-    "contact": { "name": "First Last", "role": "Owner" },
+    "contact": {
+      "name": "First Last",
+      "role": "Owner"
+    },
     "prepared": "Month YYYY",
     "status": "draft"
   },
   "blocks": [
-    { "type": "hero", "eyebrow": "Website performance report", "title": "Company Name", "subtitle": "One sentence on what this report covers." },
+    {
+      "type": "hero",
+      "eyebrow": "Website performance report",
+      "title": "Company Name",
+      "subtitle": "One sentence on what this report covers."
+    },
+    {
+      "type": "snapshot",
+      "eyebrow": "What we looked at",
+      "heading": "We went through your site",
+      "body": "One or two sentences.",
+      "images": [
+        {
+          "image": "/images/site/<slug>/homepage-1-top.png",
+          "alt": "Describe the screenshot.",
+          "caption": "Top"
+        },
+        {
+          "image": "/images/site/<slug>/homepage-2-middle.png",
+          "alt": "Describe the screenshot.",
+          "caption": "Middle"
+        }
+      ]
+    },
     {
       "type": "kpis",
       "heading": "The short version",
       "intro": "Optional.",
       "items": [
-        { "label": "Mobile score", "value": 0, "max": 100, "status": "poor | warn | good", "statusLabel": "Optional override", "note": "One sentence." }
+        {
+          "label": "Mobile score",
+          "value": 0,
+          "max": 100,
+          "status": "poor | warn | good",
+          "statusLabel": "Optional override",
+          "note": "One sentence."
+        }
+      ]
+    },
+    {
+      "type": "metrics",
+      "heading": "The numbers behind the score",
+      "rowLabel": "Measure",
+      "columns": [
+        "Mobile",
+        "Desktop"
+      ],
+      "rows": [
+        {
+          "label": "Plain-language name",
+          "term": "LCP",
+          "cells": [
+            {
+              "value": "0 s",
+              "status": "poor | warn | good"
+            },
+            {
+              "value": "0 s"
+            }
+          ]
+        }
+      ],
+      "note": "Optional."
+    },
+    {
+      "type": "gallery",
+      "heading": "The audit, as Google ran it",
+      "items": [
+        {
+          "image": "/images/pagespeed/<slug>/mobile-scores.webp",
+          "alt": "Describe the screenshot.",
+          "caption": "Optional."
+        }
       ]
     },
     {
       "type": "findings",
       "heading": "What we found",
-      "items": [{ "title": "Short title", "body": "Two sentences at most.", "evidence": "Optional source line.", "severity": "high | medium | low" }]
+      "items": [
+        {
+          "title": "Short title",
+          "body": "Two sentences at most.",
+          "evidence": "Optional source line.",
+          "severity": "high | medium | low"
+        }
+      ]
     },
     {
       "type": "competitors",
       "heading": "How you compare",
       "rowLabel": "Company",
-      "columns": ["Column A", "Column B"],
+      "columns": [
+        "Column A",
+        "Column B"
+      ],
       "rows": [
-        { "name": "Client", "client": true, "cells": [{ "value": "0", "status": "poor" }, { "value": "0" }] },
-        { "name": "Competitor", "cells": [{ "value": "0" }, { "value": "0" }] }
+        {
+          "name": "Client",
+          "client": true,
+          "cells": [
+            {
+              "value": "0",
+              "status": "poor"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "Competitor",
+          "cells": [
+            {
+              "value": "0"
+            },
+            {
+              "value": "0"
+            }
+          ]
+        }
       ],
       "note": "Optional."
     },
     {
       "type": "ai_visibility",
       "heading": "Do AI tools recommend you?",
-      "engines": [{ "name": "ChatGPT", "query": "The exact question asked", "result": "mentioned | partial | absent", "note": "Optional.", "image": "/images/ai/example.png", "imageAlt": "Describe what the screenshot shows." }],
+      "engines": [
+        {
+          "name": "ChatGPT",
+          "query": "The exact question asked",
+          "result": "mentioned | partial | absent",
+          "note": "Optional.",
+          "image": "/images/ai/example.png",
+          "imageAlt": "Describe what the screenshot shows."
+        }
+      ],
       "note": "Optional."
     },
     {
       "type": "recommendations",
       "heading": "What we would do first",
-      "items": [{ "title": "Action", "body": "Why and how.", "impact": "High", "effort": "Low" }]
+      "items": [
+        {
+          "title": "Action",
+          "body": "Why and how.",
+          "impact": "High",
+          "effort": "Low"
+        }
+      ]
     },
     {
       "type": "cta",
       "heading": "Want to talk it through?",
       "body": "Optional.",
-      "button": { "label": "Reply to schedule a call", "href": "mailto:you@example.com" }
+      "button": {
+        "label": "Reply to schedule a call",
+        "href": "mailto:you@example.com"
+      }
     }
   ]
 }

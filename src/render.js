@@ -16,6 +16,12 @@ const ridge = () =>
 const STATUS_LABEL = { good: 'Good', warn: 'Needs improvement', poor: 'Poor' };
 const status = (s) => (STATUS_LABEL[s] ? s : 'warn');
 
+const figure = (src, alt, caption) => `
+  <figure class="evidence-fig">
+    <a href="${safeHref(src)}" target="_blank" rel="noopener"><img class="evidence-img" src="${safeHref(src)}" alt="${esc(alt)}" loading="lazy" /></a>
+    ${caption ? `<figcaption>${esc(caption)}</figcaption>` : ''}
+  </figure>`;
+
 const head = (b, eyebrow) => `
   <header class="section-head">
     ${eyebrow ? `<p class="eyebrow">${esc(eyebrow)}</p>` : ''}
@@ -59,6 +65,53 @@ const blocks = {
       })
       .join('');
     return `<section class="section"><div class="wrap">${b.heading ? head(b, b.eyebrow) : ''}<div class="kpi-grid">${items}</div></div></section>`;
+  },
+
+  snapshot(b) {
+    const shots = b.images ?? (b.image ? [{ image: b.image, alt: b.imageAlt, caption: b.caption }] : []);
+    return `
+    <section class="section snapshot"><div class="wrap">
+      <header class="section-head">
+        ${b.eyebrow ? `<p class="eyebrow">${esc(b.eyebrow)}</p>` : ''}
+        <h2>${esc(b.heading)}</h2>
+        ${b.body ? `<p class="lede">${esc(b.body)}</p>` : ''}
+      </header>
+      <div class="snapshot-grid">${shots.map((i) => figure(i.image, i.alt ?? b.heading, i.caption)).join('')}</div>
+    </div></section>`;
+  },
+
+  metrics(b) {
+    const cols = b.columns ?? [];
+    const rows = (b.rows ?? [])
+      .map(
+        (r) => `
+        <tr>
+          <th scope="row">${esc(r.label)}${r.term ? ` <span class="term">${esc(r.term)}</span>` : ''}</th>
+          ${cols
+            .map((_, i) => {
+              const c = r.cells?.[i] ?? {};
+              return `<td class="${c.status ? `cell-${status(c.status)}` : ''}">${esc(c.value ?? '')}</td>`;
+            })
+            .join('')}
+        </tr>`,
+      )
+      .join('');
+    return `
+    <section class="section"><div class="wrap">
+      ${head(b, b.eyebrow)}
+      <div class="table-scroll">
+        <table class="compare">
+          <thead><tr><th scope="col">${esc(b.rowLabel ?? 'Measure')}</th>${cols.map((c) => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+      ${b.note ? `<p class="fine">${esc(b.note)}</p>` : ''}
+    </div></section>`;
+  },
+
+  gallery(b) {
+    const items = (b.items ?? []).map((i) => figure(i.image, i.alt, i.caption)).join('');
+    return `<section class="section section-surface gallery"><div class="wrap">${head(b, b.eyebrow ?? 'The audit')}<div class="gallery-grid">${items}</div></div></section>`;
   },
 
   findings(b) {

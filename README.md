@@ -22,7 +22,7 @@ npm run build
 
 ## Blocks
 
-`hero`, `kpis`, `findings`, `competitors`, `ai_visibility`, `recommendations`, `cta`.
+`hero`, `snapshot`, `kpis`, `metrics`, `gallery`, `findings`, `competitors`, `ai_visibility`, `recommendations`, `cta`.
 Renderers live in `src/render.js`. To add a block type, add a function there. Nothing else changes.
 
 ## Design
@@ -41,3 +41,5 @@ Copy rules: quiet, plainspoken, short sentences, no em dashes, no jargon.
 AI visibility screenshots go in `public/images/ai/` and are referenced from the JSON as `"image": "/images/ai/<file>.png"`.
 Shared filenames apply to every report, so for a second client use a subfolder, like `/images/ai/<slug>/chatgpt.png`.
 A missing file hides its figure instead of showing a broken image.
+
+PageSpeed screenshots go in `public/images/pagespeed/` and the homepage screenshot in `public/images/site/` (cut a long page into 2 or 3 parts so each reads at a glance). Every image in the report opens in the lightbox when clicked.

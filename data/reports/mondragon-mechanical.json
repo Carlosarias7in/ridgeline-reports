@@ -20,49 +20,183 @@
       "subtitle": "How mondragonac.com performs today, how it compares to Dallas HVAC competitors, and what to fix first."
     },
     {
+      "type": "snapshot",
+      "eyebrow": "What we looked at",
+      "heading": "We went through your site",
+      "body": "We ran mondragonac.com through Google PageSpeed Insights on a phone and on a desktop. This is the homepage we tested, in three parts. Everything below comes from that test.",
+      "images": [
+        {
+          "image": "/images/site/homepage-1-top.png",
+          "alt": "Top of the mondragonac.com homepage: header, hero and contact form.",
+          "caption": "Top: header, hero and contact form"
+        },
+        {
+          "image": "/images/site/homepage-2-middle.png",
+          "alt": "Middle of the mondragonac.com homepage: savings estimate, emergency banner, reviews and badges.",
+          "caption": "Middle: savings estimate, reviews and badges"
+        },
+        {
+          "image": "/images/site/homepage-3-bottom.png",
+          "alt": "Bottom of the mondragonac.com homepage: brands, reviews and footer.",
+          "caption": "Bottom: brands, reviews and footer"
+        }
+      ]
+    },
+    {
       "type": "kpis",
       "heading": "The short version",
       "intro": "Most people who find you will be on a phone. Your site is slowest there.",
       "items": [
         {
           "label": "Mobile score",
-          "value": 48,
+          "value": 25,
           "max": 100,
           "status": "poor",
           "statusLabel": "Poor",
-          "note": "Pages load slowly on a phone. Many visitors leave before they see your number."
+          "note": "On a phone, the main content takes almost 10 seconds to show. Many visitors leave before that."
         },
         {
           "label": "Desktop score",
-          "value": 64,
+          "value": 36,
           "max": 100,
-          "status": "warn",
-          "statusLabel": "Needs improvement",
-          "note": "Better than mobile, but still short of the 90 that Google rates as good."
+          "status": "poor",
+          "statusLabel": "Poor",
+          "note": "Faster than mobile, but still well short of the 90 that Google rates as good."
+        }
+      ]
+    },
+    {
+      "type": "metrics",
+      "heading": "The numbers behind the score",
+      "intro": "Five measures decide most of your score. Red means Google rates it poor. Amber means it needs improvement. Green means good.",
+      "rowLabel": "Measure",
+      "columns": [
+        "Mobile",
+        "Desktop"
+      ],
+      "rows": [
+        {
+          "label": "First thing appears",
+          "term": "FCP",
+          "cells": [
+            {
+              "value": "4.8 s",
+              "status": "poor"
+            },
+            {
+              "value": "0.6 s",
+              "status": "good"
+            }
+          ]
+        },
+        {
+          "label": "Main content appears",
+          "term": "LCP",
+          "cells": [
+            {
+              "value": "9.9 s",
+              "status": "poor"
+            },
+            {
+              "value": "5.0 s",
+              "status": "poor"
+            }
+          ]
+        },
+        {
+          "label": "Page stuck while loading",
+          "term": "TBT",
+          "cells": [
+            {
+              "value": "2,130 ms",
+              "status": "poor"
+            },
+            {
+              "value": "1,040 ms",
+              "status": "poor"
+            }
+          ]
+        },
+        {
+          "label": "Layout jumps around",
+          "term": "CLS",
+          "cells": [
+            {
+              "value": "0.108",
+              "status": "warn"
+            },
+            {
+              "value": "0.159",
+              "status": "warn"
+            }
+          ]
+        },
+        {
+          "label": "Time to look loaded",
+          "term": "SI",
+          "cells": [
+            {
+              "value": "10.5 s",
+              "status": "poor"
+            },
+            {
+              "value": "2.5 s",
+              "status": "poor"
+            }
+          ]
+        }
+      ],
+      "note": "Source: Google PageSpeed Insights. Good targets are LCP under 2.5 s, TBT under 200 ms and CLS under 0.1."
+    },
+    {
+      "type": "gallery",
+      "eyebrow": "The audit",
+      "heading": "The audit, as Google ran it",
+      "intro": "These are the results as Google reported them. Click any image to enlarge.",
+      "items": [
+        {
+          "image": "/images/pagespeed/mobile-scores.webp",
+          "alt": "PageSpeed Insights mobile results for mondragonac.com. Performance 25.",
+          "caption": "Mobile: scores and timings"
+        },
+        {
+          "image": "/images/pagespeed/mobile-audits.webp",
+          "alt": "PageSpeed Insights mobile audits for mondragonac.com, led by render blocking requests.",
+          "caption": "Mobile: what is slowing the page"
+        },
+        {
+          "image": "/images/pagespeed/desktop-scores.webp",
+          "alt": "PageSpeed Insights desktop results for mondragonac.com. Performance 36.",
+          "caption": "Desktop: scores and timings"
+        },
+        {
+          "image": "/images/pagespeed/desktop-audits.webp",
+          "alt": "PageSpeed Insights desktop audits for mondragonac.com, led by improved image delivery.",
+          "caption": "Desktop: what is slowing the page"
         }
       ]
     },
     {
       "type": "findings",
       "heading": "What we found",
-      "intro": "Three issues account for most of the gap. Each one is fixable.",
+      "intro": "Three issues account for most of the delay. Each one is fixable.",
       "items": [
         {
-          "title": "The site is slow on phones",
-          "body": "A score of 48 means the page takes too long to show anything useful. Someone with a broken AC will not wait.",
-          "evidence": "Source: Google PageSpeed Insights, mobile. Add load time and largest paint here.",
+          "title": "Scripts and styles hold up the page",
+          "body": "The browser has to load these files before it can show anything. On a phone that wait costs an estimated 3,250 ms.",
+          "evidence": "Google PageSpeed Insights, mobile. Render blocking requests: estimated savings of 3,250 ms.",
           "severity": "high"
         },
         {
-          "title": "The call button is not the first thing a visitor sees",
-          "body": "Homeowners searching for repair want one thing. A phone number they can tap. It should be visible without scrolling.",
-          "evidence": "Confirm against the live homepage before sending.",
+          "title": "The main content takes 9.9 seconds to appear on a phone",
+          "body": "Google rates anything over 4 seconds as poor. A homeowner with a broken AC will not wait that long.",
+          "evidence": "Google PageSpeed Insights, mobile. Largest Contentful Paint: 9.9 s. On desktop it is 5.0 s.",
           "severity": "high"
         },
         {
-          "title": "Images are larger than they need to be",
-          "body": "Oversized photos are a common cause of slow pages. Resizing them costs nothing and helps right away.",
-          "evidence": "Confirm image sizes from the audit before sending.",
+          "title": "Images are heavier than they need to be",
+          "body": "The photos on the page are larger than what a phone needs. Resizing and compressing them cuts load time without changing how the page looks.",
+          "evidence": "Google PageSpeed Insights, mobile. Improved image delivery: estimated savings of 531 KiB.",
           "severity": "medium"
         }
       ]
@@ -70,7 +204,7 @@
     {
       "type": "competitors",
       "heading": "How you compare",
-      "intro": "Every site in this group is slow, including yours. But yours is the fastest of the four, on phones and on desktop. Whoever fixes this first pulls ahead.",
+      "intro": "Every site in this group is slow. Right now yours is the slowest of the four, by a small margin on phones. That leaves room to move first. Fixing the causes above would put you ahead of all three.",
       "rowLabel": "Company",
       "columns": [
         "Mobile score",
@@ -82,12 +216,12 @@
           "client": true,
           "cells": [
             {
-              "value": "48",
+              "value": "25",
               "status": "poor"
             },
             {
-              "value": "64",
-              "status": "warn"
+              "value": "36",
+              "status": "poor"
             }
           ]
         },
@@ -131,7 +265,7 @@
           ]
         }
       ],
-      "note": "Scores from Google PageSpeed Insights. Below 50 is poor, 50 to 89 needs improvement, 90 and up is good."
+      "note": "Scores from Google PageSpeed Insights. Mondragon was tested for this report. The other three were measured earlier and may have changed. Below 50 is poor, 50 to 89 needs improvement, 90 and up is good."
     },
     {
       "type": "ai_visibility",
@@ -170,15 +304,21 @@
       "heading": "What we would do first",
       "items": [
         {
-          "title": "Speed up the mobile site",
-          "body": "Resize images, remove scripts you do not use, and load only what the first screen needs.",
+          "title": "Stop scripts and styles from blocking the page",
+          "body": "Load only what the first screen needs, and load the rest after. This is the biggest single gain on phones.",
+          "impact": "High",
+          "effort": "Medium"
+        },
+        {
+          "title": "Resize and compress the images",
+          "body": "Serve each photo at the size the screen needs, in a modern format. Load the top image first.",
           "impact": "High",
           "effort": "Low"
         },
         {
-          "title": "Put a tap-to-call button at the top of every page",
-          "body": "One clear action. Always in the same place.",
-          "impact": "High",
+          "title": "Stop the layout from jumping",
+          "body": "Reserve space for images and the chat widget so the page does not shift as it loads.",
+          "impact": "Medium",
           "effort": "Low"
         },
         {
@@ -192,7 +332,7 @@
     {
       "type": "cta",
       "heading": "Be the first to fix it",
-      "body": "Your competitors are slower than you are, and none of them have fixed it yet. We can walk you through this report in twenty minutes. No pitch deck. Just the numbers and what we would fix.",
+      "body": "Every site in this group is slow, so the first one to fix it stands out. We can walk you through this report in twenty minutes. No pitch deck. Just the numbers and what we would fix.",
       "button": {
         "label": "Reply to schedule a call",
         "href": "mailto:hello@ridgelinelabs.co?subject=Mondragon%20Mechanical%20report"
