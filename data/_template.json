@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "slug": "company-name",
+    "company": "Company Name LLC",
+    "vertical": "industry-key",
+    "industry": "Industry",
+    "location": "City, ST",
+    "website": "example.com",
+    "contact": { "name": "First Last", "role": "Owner" },
+    "prepared": "Month YYYY",
+    "status": "draft"
+  },
+  "blocks": [
+    { "type": "hero", "eyebrow": "Website performance report", "title": "Company Name", "subtitle": "One sentence on what this report covers." },
+    {
+      "type": "kpis",
+      "heading": "The short version",
+      "intro": "Optional.",
+      "items": [
+        { "label": "Mobile score", "value": 0, "max": 100, "status": "poor | warn | good", "statusLabel": "Optional override", "note": "One sentence." }
+      ]
+    },
+    {
+      "type": "findings",
+      "heading": "What we found",
+      "items": [{ "title": "Short title", "body": "Two sentences at most.", "evidence": "Optional source line.", "severity": "high | medium | low" }]
+    },
+    {
+      "type": "competitors",
+      "heading": "How you compare",
+      "rowLabel": "Company",
+      "columns": ["Column A", "Column B"],
+      "rows": [
+        { "name": "Client", "client": true, "cells": [{ "value": "0", "status": "poor" }, { "value": "0" }] },
+        { "name": "Competitor", "cells": [{ "value": "0" }, { "value": "0" }] }
+      ],
+      "note": "Optional."
+    },
+    {
+      "type": "ai_visibility",
+      "heading": "Do AI tools recommend you?",
+      "engines": [{ "name": "ChatGPT", "query": "The exact question asked", "result": "mentioned | partial | absent", "note": "Optional.", "image": "/images/ai/example.png", "imageAlt": "Describe what the screenshot shows." }],
+      "note": "Optional."
+    },
+    {
+      "type": "recommendations",
+      "heading": "What we would do first",
+      "items": [{ "title": "Action", "body": "Why and how.", "impact": "High", "effort": "Low" }]
+    },
+    {
+      "type": "cta",
+      "heading": "Want to talk it through?",
+      "body": "Optional.",
+      "button": { "label": "Reply to schedule a call", "href": "mailto:you@example.com" }
+    }
+  ]
+}

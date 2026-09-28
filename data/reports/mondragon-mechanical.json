@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "slug": "mondragon-mechanical",
+    "company": "Mondragon Mechanical LLC",
+    "vertical": "hvac",
+    "industry": "HVAC",
+    "location": "Dallas, TX",
+    "website": "mondragonac.com",
+    "contact": {
+      "name": "Jose Luis Mondragon"
+    },
+    "prepared": "September 2026",
+    "status": "draft"
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "eyebrow": "Website performance report",
+      "title": "Mondragon Mechanical",
+      "subtitle": "How mondragonac.com performs today, how it compares to Dallas HVAC competitors, and what to fix first."
+    },
+    {
+      "type": "kpis",
+      "heading": "The short version",
+      "intro": "Most people who find you will be on a phone. Your site is slowest there.",
+      "items": [
+        {
+          "label": "Mobile score",
+          "value": 48,
+          "max": 100,
+          "status": "poor",
+          "statusLabel": "Poor",
+          "note": "Pages load slowly on a phone. Many visitors leave before they see your number."
+        },
+        {
+          "label": "Desktop score",
+          "value": 64,
+          "max": 100,
+          "status": "warn",
+          "statusLabel": "Needs improvement",
+          "note": "Better than mobile, but still short of the 90 that Google rates as good."
+        }
+      ]
+    },
+    {
+      "type": "findings",
+      "heading": "What we found",
+      "intro": "Three issues account for most of the gap. Each one is fixable.",
+      "items": [
+        {
+          "title": "The site is slow on phones",
+          "body": "A score of 48 means the page takes too long to show anything useful. Someone with a broken AC will not wait.",
+          "evidence": "Source: Google PageSpeed Insights, mobile. Add load time and largest paint here.",
+          "severity": "high"
+        },
+        {
+          "title": "The call button is not the first thing a visitor sees",
+          "body": "Homeowners searching for repair want one thing. A phone number they can tap. It should be visible without scrolling.",
+          "evidence": "Confirm against the live homepage before sending.",
+          "severity": "high"
+        },
+        {
+          "title": "Images are larger than they need to be",
+          "body": "Oversized photos are a common cause of slow pages. Resizing them costs nothing and helps right away.",
+          "evidence": "Confirm image sizes from the audit before sending.",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "type": "competitors",
+      "heading": "How you compare",
+      "intro": "Every site in this group is slow, including yours. But yours is the fastest of the four, on phones and on desktop. Whoever fixes this first pulls ahead.",
+      "rowLabel": "Company",
+      "columns": [
+        "Mobile score",
+        "Desktop score"
+      ],
+      "rows": [
+        {
+          "name": "Mondragon Mechanical",
+          "client": true,
+          "cells": [
+            {
+              "value": "48",
+              "status": "poor"
+            },
+            {
+              "value": "64",
+              "status": "warn"
+            }
+          ]
+        },
+        {
+          "name": "Harlen Johnson HVAC",
+          "cells": [
+            {
+              "value": "29",
+              "status": "poor"
+            },
+            {
+              "value": "47",
+              "status": "poor"
+            }
+          ]
+        },
+        {
+          "name": "Lex Air Conditioning",
+          "cells": [
+            {
+              "value": "29",
+              "status": "poor"
+            },
+            {
+              "value": "55",
+              "status": "warn"
+            }
+          ]
+        },
+        {
+          "name": "Metro Air Conditioning",
+          "cells": [
+            {
+              "value": "33",
+              "status": "poor"
+            },
+            {
+              "value": "43",
+              "status": "poor"
+            }
+          ]
+        }
+      ],
+      "note": "Scores from Google PageSpeed Insights. Below 50 is poor, 50 to 89 needs improvement, 90 and up is good."
+    },
+    {
+      "type": "ai_visibility",
+      "heading": "Do AI tools recommend you?",
+      "intro": "More people now ask an AI tool who to call. We asked each one the same kind of question. Mondragon Mechanical did not come up in any of them.",
+      "engines": [
+        {
+          "name": "Google AI Mode",
+          "query": "best HVAC repair Dallas TX",
+          "result": "absent",
+          "note": "Not mentioned.",
+          "image": "/images/ai/google-ai.png",
+          "imageAlt": "Google AI Mode results for best HVAC repair Dallas TX. Mondragon Mechanical is not listed."
+        },
+        {
+          "name": "ChatGPT",
+          "query": "Who are the best HVAC repair companies in Dallas TX?",
+          "result": "absent",
+          "note": "Not mentioned.",
+          "image": "/images/ai/chatgpt.png",
+          "imageAlt": "ChatGPT answer to: Who are the best HVAC repair companies in Dallas TX? Mondragon Mechanical is not listed."
+        },
+        {
+          "name": "Perplexity",
+          "query": "best HVAC repair companies in Dallas TX",
+          "result": "absent",
+          "note": "Not mentioned.",
+          "image": "/images/ai/perplexity.png",
+          "imageAlt": "Perplexity results for best HVAC repair companies in Dallas TX. Mondragon Mechanical is not listed."
+        }
+      ],
+      "note": "Queries run on the date this report was prepared. AI results change, so they may differ later."
+    },
+    {
+      "type": "recommendations",
+      "heading": "What we would do first",
+      "items": [
+        {
+          "title": "Speed up the mobile site",
+          "body": "Resize images, remove scripts you do not use, and load only what the first screen needs.",
+          "impact": "High",
+          "effort": "Low"
+        },
+        {
+          "title": "Put a tap-to-call button at the top of every page",
+          "body": "One clear action. Always in the same place.",
+          "impact": "High",
+          "effort": "Low"
+        },
+        {
+          "title": "Make your services and service area easy to read",
+          "body": "Plain pages for repair, installation and maintenance, each naming the Dallas neighborhoods you cover. This helps search engines and AI tools understand who you are.",
+          "impact": "Medium",
+          "effort": "Medium"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Be the first to fix it",
+      "body": "Your competitors are slower than you are, and none of them have fixed it yet. We can walk you through this report in twenty minutes. No pitch deck. Just the numbers and what we would fix.",
+      "button": {
+        "label": "Reply to schedule a call",
+        "href": "mailto:hello@ridgelinelabs.co?subject=Mondragon%20Mechanical%20report"
+      }
+    }
+  ]
+}
