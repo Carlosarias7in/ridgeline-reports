@@ -241,6 +241,7 @@ html.lightbox-open { overflow: hidden; }
 }
 .button:hover { background: var(--bone); }
 .button:focus-visible { outline: 2px solid var(--bone); outline-offset: 3px; }
+.cta-closing { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 500; letter-spacing: var(--track-heading); line-height: 1.25; margin-top: 3rem; max-width: 30rem; }
 .cta-for { color: var(--stone); font-size: 0.9rem; margin-top: 2rem; }
 
 .footer { background: var(--ink); color: var(--bone); border-top: 1px solid var(--slate); padding: 2rem 0; }

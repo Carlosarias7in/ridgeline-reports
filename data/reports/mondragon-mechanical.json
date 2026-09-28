@@ -10,7 +10,7 @@
       "name": "Jose Luis Mondragon"
     },
     "prepared": "September 2026",
-    "status": "draft"
+    "status": "final"
   },
   "blocks": [
     {
@@ -334,9 +334,10 @@
       "heading": "Be the first to fix it",
       "body": "Every site in this group is slow, so the first one to fix it stands out. We can walk you through this report in twenty minutes. No pitch deck. Just the numbers and what we would fix.",
       "button": {
-        "label": "Reply to schedule a call",
-        "href": "mailto:hello@ridgelinelabs.co?subject=Mondragon%20Mechanical%20report"
-      }
+        "label": "Get in touch",
+        "href": "https://ridgelinelabs.co"
+      },
+      "closing": "Designed in days. Shipped in weeks. Optimized for AI."
     }
   ]
 }

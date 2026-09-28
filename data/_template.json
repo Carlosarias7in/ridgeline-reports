@@ -171,7 +171,8 @@
       "button": {
         "label": "Reply to schedule a call",
         "href": "mailto:you@example.com"
-      }
+      },
+      "closing": "Optional tagline under the button."
     }
   ]
 }

@@ -209,6 +209,7 @@ const blocks = {
         <h2>${esc(b.heading)}</h2>
         ${b.body ? `<p class="lede">${esc(b.body)}</p>` : ''}
         ${b.button ? `<a class="button" href="${safeHref(b.button.href)}">${esc(b.button.label)}</a>` : ''}
+        ${b.closing ? `<p class="cta-closing">${esc(b.closing)}</p>` : ''}
         ${c.name ? `<p class="cta-for">Prepared for ${esc(c.name)}${c.role ? `, ${esc(c.role)}` : ''}, ${esc(meta.company)}.</p>` : ''}
         ${ridge()}
       </div>
